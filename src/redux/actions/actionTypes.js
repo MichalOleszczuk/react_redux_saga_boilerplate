@@ -1,0 +1,4 @@
+export const BUTTON_CLICKED = 'BUTTON_CLICKED';
+export const SAGA_BUTTON_CLICKED = 'SAGA_BUTTON_CLICKED';
+export const SAGA_IN_PROGRESS = 'SAGA_IN_PROGRESS';
+export const SAGA_DONE = 'SAGA_DONE';
