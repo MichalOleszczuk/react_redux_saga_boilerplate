@@ -1,3 +1,8 @@
+import 'bootstrap/dist/js/bootstrap.min';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import '../design/css/style.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {applyMiddleware, createStore} from 'redux';
@@ -9,6 +14,8 @@ import {ConnectedRouter, routerMiddleware} from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import routes from './configuration/routes';
 import {composeWithDevTools} from 'redux-devtools-extension';
+import translate from 'counterpart';
+import en from './configuration/lang/en.json';
 
 const ELEMENT_TO_BOOTSTRAP = 'root';
 const BootstrapedElement = document.getElementById(ELEMENT_TO_BOOTSTRAP);
@@ -23,6 +30,9 @@ export const store = createStore(
         applyMiddleware(...middlewares)
     )
 );
+
+translate.registerTranslations('en', en);
+translate.setLocale('en');
 
 sagaMiddleware.run(rootSaga);
 
