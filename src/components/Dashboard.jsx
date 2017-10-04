@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {makeAction} from '../redux/actions/makeAction';
-import {BUTTON_CLICKED, SAGA_BUTTON_CLICKED} from '../redux/actions/actionTypes';
+import {LOG_IN, LOG_IN_IN_PROGRESS} from '../redux/actions/actionTypes';
 
 const Dashboard = ({clicked, sagaClicked, onClick, sagaOnClick}) => (
     <div>
@@ -31,8 +31,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-    onClick: makeAction(BUTTON_CLICKED),
-    sagaOnClick: makeAction(SAGA_BUTTON_CLICKED),
+    onClick: makeAction(LOG_IN),
+    sagaOnClick: makeAction(LOG_IN_IN_PROGRESS),
 };
 
 export default  connect(

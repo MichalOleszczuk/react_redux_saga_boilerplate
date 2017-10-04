@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
-import disableWrapperAction from '../redux/actions/common/navigation/disableWrapper';
+import {DISABLE_WRAPPER} from '../redux/actions/actionTypes';
+import {makeAction} from '../redux/actions/makeAction';
 
 class UnauthorizedPage extends React.Component {
-    componentDidMount() {
+    componentWillMount() {
         this.props.disableWrapper();
     }
 
@@ -24,7 +24,7 @@ UnauthorizedPage.propTypes = {
 };
 
 const mapDispatchToProps = {
-    disableWrapper: disableWrapperAction,
+    disableWrapper: makeAction(DISABLE_WRAPPER),
 };
 
 export default connect(

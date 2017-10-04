@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 
-import Navigation from '../components/common';
+import Navigation from '../components/common/navigation/index';
 
 class NavigationWrapper extends React.Component {
     render() {

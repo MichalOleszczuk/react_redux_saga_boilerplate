@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
-import disableWrapperAction from '../redux/actions/common/navigation/disableWrapper';
+import {DISABLE_WRAPPER} from '../redux/actions/actionTypes';
+import {makeAction} from '../redux/actions/makeAction';
 
 class NotFoundPage extends React.Component {
     componentWillMount() {
@@ -24,10 +24,10 @@ NotFoundPage.propTypes = {
 };
 
 const mapDispatchToProps = {
-    disableWrapper: disableWrapperAction,
+    disableWrapper: makeAction(DISABLE_WRAPPER),
 };
 
-export default  connect(
+export default connect(
     () => {},
     mapDispatchToProps
 )(NotFoundPage);

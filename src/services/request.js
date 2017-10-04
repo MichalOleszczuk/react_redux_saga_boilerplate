@@ -12,7 +12,7 @@ const service = (requestType, url, data = {}, config = {}) => {
 
     switch (requestType) {
         case GET: {
-            return request.get(url, data, config);
+            return request.get(url, config);
         }
         case POST: {
             return request.post(url, data, config);
@@ -24,7 +24,7 @@ const service = (requestType, url, data = {}, config = {}) => {
             return request.patch(url, data, config);
         }
         case DELETE: {
-            return request.delete(url, data, config);
+            return request.delete(url, config);
         }
         default: {
             throw new TypeError('No valid request type provided');
