@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const DEFAULT_STATE = {
-    disabled: true,
+    disabled: false,
 };
 
 const navigationReducer = (state = DEFAULT_STATE, action) => {
