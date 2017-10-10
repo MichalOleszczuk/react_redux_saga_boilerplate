@@ -24,9 +24,6 @@ const navigationReducer = (state = DEFAULT_STATE, action) => {
                 disabled: true,
             };
         }
-        case '@@router/LOCATION_CHANGE': {
-            return DEFAULT_STATE;
-        }
         default: {
             return state;
         }

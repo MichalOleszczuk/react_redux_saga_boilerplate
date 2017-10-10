@@ -18,7 +18,7 @@ class NavigationWrapper extends React.Component {
             );
         } else {
             return (
-                <Navigation>
+                <Navigation history={this.props.history}>
                     {childrenWithProps}
                 </Navigation>
             );
@@ -29,6 +29,7 @@ class NavigationWrapper extends React.Component {
 NavigationWrapper.propTypes = {
     children: PropTypes.element.isRequired,
     disabled: PropTypes.bool.isRequired,
+    history: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({

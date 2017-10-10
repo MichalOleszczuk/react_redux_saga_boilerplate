@@ -1,15 +1,15 @@
 import {take, put, all, call, fork} from 'redux-saga/effects';
 import {auth} from '../actions/actionTypes';
-import {API_URL} from '../../configuration/config';
-import request, {POST} from '../../services/request';
+// import {API_URL} from '../../configuration/config';
+// import request, {POST} from '../../services/request';
 
 export function *logIn() {
     while (true) {
         try {
             const {payload: {data, callback}} = yield take(auth.LOG_IN);
             yield put({type: auth.LOG_IN_IN_PROGRESS});
-            const response = yield request(POST, API_URL + 'auth/', data);
-            yield put({type: auth.LOG_IN_SUCCESS, payload: response});
+            // const response = yield request(POST, API_URL + 'auth/', data);
+            yield put({type: auth.LOG_IN_SUCCESS, payload: data});
             yield put({type: auth.LOG_IN_SUCCESS});
             yield call(callback);
         } catch (e) {

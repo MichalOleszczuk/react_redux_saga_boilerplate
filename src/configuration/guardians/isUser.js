@@ -13,3 +13,4 @@ export function isUser(component) {
     }
 }
 
+export default isUser;

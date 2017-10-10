@@ -1,20 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import PropTypes from 'prop-types';
-import LogIn from '../components/authorization/LogIn';
+// import PropTypes from 'prop-types';
+import Dashboard from '../components/Dashboard';
 
-class LogInPage extends React.Component {
+class DashboardPage extends React.Component {
     render() {
         return (
-            <LogIn history={this.props.history}/>
+            <Dashboard/>
         );
     }
 }
 
-LogInPage.propTypes = {
-    history: PropTypes.object.isRequired,
-};
+DashboardPage.propTypes = {};
 
 const mapStateToProps = () => ({});
 
@@ -23,4 +21,4 @@ const mapDispatchToProps = {};
 export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(LogInPage));
+)(DashboardPage));
