@@ -5,12 +5,12 @@ import Footer from './footer';
 
 const Navigation = ({children}) => [
     <Header key="-1"/>,
-    {children},
+    children,
     <Footer key="-2"/>,
 ];
 
 Navigation.propTypes = {
-    children: PropTypes.element.isRequired,
+    children: PropTypes.arrayOf(PropTypes.node).isRequired,
 };
 
 export default Navigation;
