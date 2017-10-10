@@ -10,6 +10,8 @@ import isNotUser from './guardians/isNotUser';
 import NavigationWrapper from '../containers/NavigationWrapper';
 import LogInPage from '../containers/LogInPage';
 import DashboardPage from '../containers/DashboardPage';
+import NotFoundPage from '../containers/NotFoundPage';
+import UnauthorizedPage from '../containers/UnauthorizedPage';
 
 const routes = (
     <NavigationWrapper>
@@ -18,6 +20,9 @@ const routes = (
             <Route exact path={paths.LOGIN_PAGE} render={() => isNotUser(<LogInPage/>)}/>
             {/* DASHBOARD */}
             <Route exact path={paths.DASHBOARD_PAGE} render={() => isUser(<DashboardPage/>)}/>
+            {/* OTHER */}
+            <Route exact path={paths.UNAUTHORIZED_PAGE} render={() => <UnauthorizedPage/>}/>
+            <Route path={paths.NOT_FOUND_PAGE} render={() => <NotFoundPage/>}/>
         </Switch>
     </NavigationWrapper>
 );
