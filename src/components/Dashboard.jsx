@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 // import {auth} from '../redux/actions/actionTypes';
 
 const Dashboard = () => (
-    <div>
+    <div className="container">
         SIEMA
     </div>
 );

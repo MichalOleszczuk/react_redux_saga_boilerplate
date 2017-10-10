@@ -10,7 +10,6 @@ export function *logIn() {
             yield put({type: auth.LOG_IN_IN_PROGRESS});
             // const response = yield request(POST, API_URL + 'auth/', data);
             yield put({type: auth.LOG_IN_SUCCESS, payload: data});
-            yield put({type: auth.LOG_IN_SUCCESS});
             yield call(callback);
         } catch (e) {
             console.error(e);

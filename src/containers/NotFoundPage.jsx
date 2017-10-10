@@ -23,12 +23,14 @@ NotFoundPage.propTypes = {
     disableWrapper: PropTypes.func.isRequired,
 };
 
+const mapStateToProps = () => ({});
+
 const mapDispatchToProps = {
     disableWrapper: makeAction(navigation.DISABLE_WRAPPER),
 };
 
 export default connect(
-    () => {},
+    mapStateToProps,
     mapDispatchToProps
 )(NotFoundPage);
 

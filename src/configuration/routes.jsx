@@ -22,7 +22,7 @@ const routes = (
             <Route exact path={paths.DASHBOARD_PAGE} render={() => isUser(<DashboardPage/>)}/>
             {/* OTHER */}
             <Route exact path={paths.UNAUTHORIZED_PAGE} render={() => <UnauthorizedPage/>}/>
-            <Route path={paths.NOT_FOUND_PAGE} render={() => <NotFoundPage/>}/>
+            <Route render={() => <NotFoundPage/>}/>
         </Switch>
     </NavigationWrapper>
 );
