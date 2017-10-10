@@ -9,8 +9,9 @@ import {DASHBOARD_PAGE} from '../../configuration/paths';
 
 const LogIn = ({logInAction, history}) => {
     const callback = () => history.push(get('previous_location') || DASHBOARD_PAGE);
-    return (
-        <div className="container">
+    return [
+        <img key="logo" className="react-logo" src="https://raw.githubusercontent.com/wiki/facebook/react/react-logo-1000-transparent.png"/>,
+        <div key="login-form" className="form-login">
             <form className="form-signin" onSubmit={(event) => {
                 event.preventDefault();
                 logInAction({
@@ -33,8 +34,8 @@ const LogIn = ({logInAction, history}) => {
                 </div>
                 <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </form>
-        </div>
-    );
+        </div>,
+    ];
 };
 
 LogIn.propTypes = {
