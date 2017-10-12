@@ -6,11 +6,12 @@ import {get} from '../../services/persist';
 import {makeAction} from '../../redux/actions/makeAction';
 import {auth} from '../../redux/actions/actionTypes';
 import {DASHBOARD_PAGE} from '../../configuration/paths';
+import Logo from '../../design/images/react-logo.png';
 
 const LogIn = ({logInAction, history}) => {
     const callback = () => history.push(get('previous_location') || DASHBOARD_PAGE);
     return [
-        <img key="logo" className="react-logo" src="https://raw.githubusercontent.com/wiki/facebook/react/react-logo-1000-transparent.png"/>,
+        <img key="logo" className="react-logo" src={Logo}/>,
         <div key="login-form" className="form-login">
             <form className="form-signin" onSubmit={(event) => {
                 event.preventDefault();
