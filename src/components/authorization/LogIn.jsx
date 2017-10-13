@@ -12,30 +12,29 @@ const LogIn = ({logInAction, history}) => {
     const callback = () => history.push(get('previous_location') || DASHBOARD_PAGE);
     return [
         <img key="logo" className="react-logo" src={Logo}/>,
-        <div key="login-form" className="form-login">
-            <form className="form-signin" onSubmit={(event) => {
-                event.preventDefault();
-                logInAction({
-                    data: {
-                        username: event.target[0].value,
-                        password: event.target[1].value,
-                    },
-                    callback: callback,
-                });
-            }}>
-                <h2 className="form-signin-heading">Please sign in</h2>
-                <label htmlFor="inputEmail" className="sr-only">Email address</label>
-                <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus/>
-                <label htmlFor="inputPassword" className="sr-only">Password</label>
-                <input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
-                <div className="checkbox">
-                    <label>
-                        <input type="checkbox" defaultValue="remember-me"/> Remember me
-                    </label>
+        <form key="login-form" className="login-form" onSubmit={(event) => {
+            event.preventDefault();
+            logInAction({
+                data: {
+                    username: event.target[0].value,
+                    password: event.target[1].value,
+                },
+                callback: callback,
+            });
+        }}>
+            <div className="login-title">React | Boilerplate</div>
+            <div className="login-inputs">
+                <div className="login-input-wrapper">
+                    <label htmlFor="inputEmail">Email address:</label>
+                    <input type="email" id="inputEmail" required autoFocus/>
                 </div>
-                <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            </form>
-        </div>,
+                <div className="login-input-wrapper">
+                    <label htmlFor="inputPassword">Password:</label>
+                    <input type="password" id="inputPassword" required/>
+                </div>
+                <button className="login-button" type="submit">Sign in</button>
+            </div>
+        </form>,
     ];
 };
 

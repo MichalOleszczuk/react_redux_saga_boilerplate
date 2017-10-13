@@ -3,13 +3,18 @@ body {
     min-width: 600px;
     min-height: 300px;
 }
+@font-face {
+    font-family: 'Log in title', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Fjalla+One');
+}
 .react-logo {
     width: 120px;
     height: auto;
     display: block;
     margin: 65px 0 0 65px;
 }
-.form-login {
+.login-form {
+    display: block;
     position: absolute;
     height: 276px;
     width: 800px;
@@ -19,4 +24,58 @@ body {
     top: 0;
     bottom: 0;
     margin: auto;
+}
+.login-title {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Log in title', sans-serif;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto 60px auto;
+    display: block;
+}
+.login-inputs {
+    color: #808499;
+    font-family: 'Log in title', sans-serif;
+    font-size: 15px;
+    width: 360px;
+    margin: 0 auto;
+}
+.login-inputs label {
+    margin-right: 10px;
+    min-width: 100px;
+    display: flex;
+}
+.login-inputs input{
+    display: flex;
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #808499;
+    width: 100%;
+}
+.login-inputs input, textarea{
+    color: white;
+}
+.login-input-wrapper {
+    display: flex;
+    margin:  0 0 15px 0;
+    width: 100%;
+    padding: 5px 0 5px 0;
+}
+.login-button {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #0b65b1;
+    border: none;
+    padding: 15px 0 15px 0;
+    margin-top: 15px;
 }
