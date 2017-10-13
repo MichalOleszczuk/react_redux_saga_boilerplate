@@ -11,7 +11,7 @@ class UnauthorizedPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="not-found-unauthorized-container">
                 <b>403 - Unauthorized</b>
                 <p>I'm sorry, You don't have privileges to view this page!</p>
             </div>

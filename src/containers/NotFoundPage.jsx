@@ -11,7 +11,7 @@ class NotFoundPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="not-found-unauthorized-container">
                 <b>404 - Page Not Found</b>
                 <p>I'm sorry, the page you were looking for cannot be found!</p>
             </div>

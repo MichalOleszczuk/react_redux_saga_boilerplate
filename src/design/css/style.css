@@ -2,11 +2,29 @@ body {
     background-color: #1f2127;
     min-width: 600px;
     min-height: 300px;
+    margin: 0;
 }
 @font-face {
     font-family: 'Log in title', sans-serif;
     src: url('https://fonts.googleapis.com/css?family=Fjalla+One');
 }
+/* UNAUTHORIZED */
+.not-found-unauthorized-container {
+    display: block;
+    position: absolute;
+    height: 276px;
+    width: 800px;
+    padding-bottom: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+/* LOG_IN PAGE */
 .react-logo {
     width: 120px;
     height: auto;
@@ -84,4 +102,40 @@ body {
     border: none;
     padding: 15px 0 15px 0;
     margin-top: 15px;
+    cursor: pointer;
+}
+/* COMMON */
+.navbar-fixed-top {
+    display: block;
+    background-color: #33353d;
+    -webkit-box-shadow: 0 7px 10px 0 rgba(34,35,41,1);
+    -moz-box-shadow:    0 7px 10px 0 rgba(34,35,41,1);
+    box-shadow:         0 7px 10px 0 rgba(34,35,41,1);
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+.logout-button {
+    background-color: #5878a0;
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    margin: 5px 10px 0 5px;
+    float: right;
+    clear: both;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.navbar-logo {
+    width: 50px;
+    height: auto;
+}
+.navbar-logo-wrapper {
+    display: inline-block;
+    max-height: 50px;
+    width: auto;
+    margin: 0 10px 0 10px;
+    padding: 5px;
 }
