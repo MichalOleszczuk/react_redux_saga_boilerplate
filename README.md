@@ -35,5 +35,9 @@ git clone https://github.com/Werewolf1992/react_boilerplate.git
 npm install
 npm start
 ```
-
+**Log In**
+```$xslt
+Email adress: <whateveryouwant>@somethink
+Password: <whateveryouwant>
+```
 Enjoy and let me know what more examples should i implement.
