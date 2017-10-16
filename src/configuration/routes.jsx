@@ -3,8 +3,8 @@ import {Route, Switch} from 'react-router';
 import * as paths from './paths';
 
 // GUARDIANS
-import isUser from './guardians/isUser';
-import isNotUser from './guardians/isNotUser';
+import isUser from './guardians/IsUser';
+import isNotUser from './guardians/IsNotUser';
 
 // PAGES
 import NavigationWrapper from '../containers/NavigationWrapper';

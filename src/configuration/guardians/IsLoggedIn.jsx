@@ -3,7 +3,7 @@ import {Redirect} from 'react-router';
 import React from 'react';
 import {LOGIN_PAGE} from '../paths';
 
-function isLoggedIn(component) {
+function IsLoggedIn(component) {
     if(get('token')) {
         return component;
     } else {
@@ -11,4 +11,4 @@ function isLoggedIn(component) {
     }
 }
 
-export default isLoggedIn;
+export default IsLoggedIn;

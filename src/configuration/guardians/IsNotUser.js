@@ -3,14 +3,14 @@ import {store} from '../../index';
 import * as React from 'react';
 import {Redirect} from 'react-router';
 import idx from 'idx';
-import {LOGIN_PAGE} from '../paths';
+import {DASHBOARD_PAGE} from '../paths';
 
-export function isUser(component) {
+export function IsNotUser(component) {
     if(idx(store, x => x.getState().auth.token)) {
-        return component;
+        return <Redirect to={DASHBOARD_PAGE}/>;
     } else {
-        return <Redirect to={LOGIN_PAGE}/>;
+        return component;
     }
 }
 
-export default isUser;
+export default IsNotUser;
