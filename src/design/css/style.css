@@ -1,8 +1,14 @@
+html {
+    height: 100%;
+}
 body {
+    height: 100%;
     background-color: #1f2127;
     min-width: 600px;
     min-height: 300px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 @font-face {
     font-family: 'Log in title', sans-serif;
@@ -106,22 +112,20 @@ body {
 }
 /* COMMON */
 .navbar-fixed-top {
-    display: block;
+    display: flex;
     background-color: #33353d;
     -webkit-box-shadow: 0 7px 10px 0 rgba(34,35,41,1);
     -moz-box-shadow:    0 7px 10px 0 rgba(34,35,41,1);
     box-shadow:         0 7px 10px 0 rgba(34,35,41,1);
-    position: fixed;
     overflow: hidden;
-    top: 0;
     width: 100%;
 }
 .logout-button {
-    background-color: #5878a0;
+    background-color: #00d8ff;
     border-radius: 50px;
     border: none;
     padding: 5px;
-    margin: 5px 10px 0 5px;
+    margin: 5px 10px 0 auto;
     float: right;
     clear: both;
     cursor: pointer;
@@ -138,4 +142,42 @@ body {
     width: auto;
     margin: 0 10px 0 10px;
     padding: 5px;
+}
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content-wrapper {
+    display: flex;
+    color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    flex: 1 0 auto;
+}
+.footer {
+    display: flex;
+    background-color: #33353d;
+    overflow: hidden;
+    min-height: 60px;
+}
+.dashboard {
+    margin: auto;
+}
+.dashboard-title {
+    font-size: 50px;
+    text-align: center;
+}
+.dashboard-list {
+    list-style-type: none;
+}
+.dashboard-list li {
+    margin: 5px;
+}
+.spinner-box {
+    margin-top: 40px;
+    text-align: center;
+}
+.spinner-box i {
+    cursor: pointer;
 }

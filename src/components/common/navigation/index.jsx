@@ -5,8 +5,10 @@ import Footer from './footer';
 
 const Navigation = ({children, history}) => [
     <Header key="-1" history={history}/>,
-    children,
-    <Footer key="-2"/>,
+    <div key="-2" className="content-wrapper">
+        {children}
+    </div>,
+    <Footer key="-3"/>,
 ];
 
 Navigation.propTypes = {
