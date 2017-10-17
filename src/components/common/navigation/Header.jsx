@@ -22,7 +22,9 @@ const Header = ({history, logOutAction}) => {
 
 Header.propTypes = {
     logOutAction: PropTypes.func.isRequired,
-    history: PropTypes.object.isRequired,
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 const mapStateToProps = () => ({});

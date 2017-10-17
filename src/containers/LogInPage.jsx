@@ -13,7 +13,9 @@ class LogInPage extends React.Component {
 }
 
 LogInPage.propTypes = {
-    history: PropTypes.object.isRequired,
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 const mapStateToProps = () => ({});

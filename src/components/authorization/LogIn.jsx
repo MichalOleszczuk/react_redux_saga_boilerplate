@@ -40,7 +40,9 @@ const LogIn = ({logInAction, history}) => {
 
 LogIn.propTypes = {
     logInAction: PropTypes.func.isRequired,
-    history: PropTypes.object.isRequired,
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 const mapStateToProps = () => ({});

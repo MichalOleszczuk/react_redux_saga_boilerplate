@@ -29,7 +29,9 @@ class NavigationWrapper extends React.Component {
 NavigationWrapper.propTypes = {
     children: PropTypes.element.isRequired,
     disabled: PropTypes.bool.isRequired,
-    history: PropTypes.object.isRequired,
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 const mapStateToProps = (state) => ({

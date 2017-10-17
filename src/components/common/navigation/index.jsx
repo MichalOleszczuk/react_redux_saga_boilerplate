@@ -13,7 +13,9 @@ const Navigation = ({children, history}) => [
 
 Navigation.propTypes = {
     children: PropTypes.arrayOf(PropTypes.node).isRequired,
-    history: PropTypes.object.isRequired,
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 export default Navigation;
