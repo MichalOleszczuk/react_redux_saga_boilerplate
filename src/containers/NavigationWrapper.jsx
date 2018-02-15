@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
+import mapStateToProps from '../redux/selectors/navigation/navigationWrapper';
 
 import Navigation from '../components/common/navigation/index';
 
@@ -33,11 +34,6 @@ NavigationWrapper.propTypes = {
         push: PropTypes.func.isRequired,
     }).isRequired,
 };
-
-const mapStateToProps = (state) => ({
-    disabled: state.navigation.disabled,
-});
-
 
 const mapDispatchToProps = {};
 
