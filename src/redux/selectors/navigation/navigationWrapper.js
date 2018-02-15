@@ -6,6 +6,8 @@ export const isNavigationDisabled = () => createSelector(
     navigation => navigation.disabled
 );
 
-export default createStructuredSelector({
+const mapStateToProps = () => createStructuredSelector({
     disabled: isNavigationDisabled(),
 });
+
+export default mapStateToProps();
