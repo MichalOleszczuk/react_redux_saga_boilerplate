@@ -10,4 +10,4 @@ const mapStateToProps = () => createStructuredSelector({
     disabled: isNavigationDisabled(),
 });
 
-export default mapStateToProps();
+export default mapStateToProps;
