@@ -14,5 +14,3 @@ export function isLoggedIn(component: JSX.Element) {
     return component;
   }
 }
-
-export default isLoggedIn;

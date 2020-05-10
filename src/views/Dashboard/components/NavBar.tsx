@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { Button, Nav, Navbar, Spinner } from 'react-bootstrap';
 import { RouteComponentProps } from 'react-router-dom';
+import { HOME_PAGE, RESOURCES_LIST_PAGE } from '../../../config/paths';
 import { useNavBar } from './useNavBar';
 
 function NavBar({ history }: RouteComponentProps) {
@@ -11,8 +12,12 @@ function NavBar({ history }: RouteComponentProps) {
       <Navbar.Brand className='text-white'>React-Boilerplate</Navbar.Brand>
       <Navbar.Collapse id='navbar-nav'>
         <Nav className='mr-auto'>
-          <Nav.Link className='text-white'>Home</Nav.Link>
-          <Nav.Link className='text-white'>List</Nav.Link>
+          <Nav.Link className='text-white' onClick={() => history.push(HOME_PAGE)}>
+            Home
+          </Nav.Link>
+          <Nav.Link className='text-white' onClick={() => history.push(RESOURCES_LIST_PAGE)}>
+            List
+          </Nav.Link>
         </Nav>
         {inProgress ? (
           <Button id='signOutInProgressButton' variant='success' disabled>

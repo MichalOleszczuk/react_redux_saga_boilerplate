@@ -21,5 +21,3 @@ export function isAuthenticated(component: JSX.Element) {
     return <Redirect to={SIGN_IN_PAGE} />;
   }
 }
-
-export default isAuthenticated;

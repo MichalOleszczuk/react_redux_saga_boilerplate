@@ -1,7 +1,5 @@
 import React, { memo } from 'react';
-import { Route, RouteComponentProps, Switch } from 'react-router-dom';
-import { HOME_PAGE } from '../../config/paths';
-import Home from '../Home/Home';
+import { RouteComponentProps } from 'react-router-dom';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 
@@ -9,16 +7,12 @@ export interface IDashboardProps extends RouteComponentProps {
   children: React.ReactNode;
 }
 
-function Dashboard(props: RouteComponentProps) {
+function Dashboard(props: IDashboardProps) {
   return (
     <div className='vh-100'>
-      <Route path={HOME_PAGE} render={(props) => <NavBar {...props} />} />
-      <div id='dashboardContent'>
-        <Switch>
-          <Route exact path={HOME_PAGE} render={(props) => <Home {...props} />} />
-        </Switch>
-      </div>
-      <Route path={HOME_PAGE} render={(props) => <Footer {...props} />} />
+      <NavBar {...props} />
+      <div id='dashboardContent'>{props.children}</div>
+      <Footer {...props} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { AUTH_ACTION_TYPES } from './actions/authActionTypes';
 import { IAuthActions } from './actions/IAuthActions';
 
 export const AUTH_DEFAULT_STATE = {
-  token: true,
+  token: false,
   error: '',
   inProgress: false,
 };

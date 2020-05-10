@@ -13,6 +13,9 @@ body {
 .vh-100 {
   min-height: 100vh;
 }
+.h-100 {
+  min-height: 100%;
+}
 #signIn-logo {
   max-height: 150px;
 }
@@ -28,4 +31,5 @@ body {
 #dashboardContent {
   padding-top: 56px;
   padding-bottom: 56px;
+  height: 100%;
 }
