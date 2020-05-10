@@ -1,7 +1,6 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import logo from '../logo.svg';
-import './App.css';
+import logo from '../design/media/logo.svg';
 
 function App(props: RouteComponentProps) {
   console.log('siema', props, process.env);

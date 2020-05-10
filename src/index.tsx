@@ -1,19 +1,18 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Route, Router } from 'react-router-dom';
-import App from './views/App';
+import { Router } from 'react-router-dom';
 import { browserHistory } from './config/history';
+import routes from './config/routes';
 import { store } from './config/store';
-import './index.css';
+import './design/global.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router history={browserHistory}>
-        <Route exact path='/' component={App} />
-      </Router>
+      <Router history={browserHistory}>{routes}</Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
