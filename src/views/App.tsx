@@ -1,10 +1,10 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import './App.css';
 import logo from '../logo.svg';
+import './App.css';
 
 function App(props: RouteComponentProps) {
-  console.log('siema', props);
+  console.log('siema', props, process.env);
   return (
     <div className='App'>
       <header className='App-header'>
