@@ -1,0 +1,35 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #1f2127;
+  color: white;
+}
+#root {
+  height: 100%;
+}
+.vh-100 {
+  min-height: 100vh;
+}
+.h-100 {
+  min-height: 100%;
+}
+#signIn-logo {
+  max-height: 150px;
+}
+#signInForm {
+  width: 217px;
+}
+#dashboardFooter {
+  height: 56px;
+}
+#signOutInProgressButton {
+  width: 88.73px;
+}
+#dashboardContent {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  height: 100%;
+}
