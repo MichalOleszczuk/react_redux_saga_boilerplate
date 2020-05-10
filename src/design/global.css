@@ -15,3 +15,6 @@ body {
 #signIn-logo {
   max-height: 150px;
 }
+#signInForm {
+  width: 217px;
+}

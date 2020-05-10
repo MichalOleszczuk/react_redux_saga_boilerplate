@@ -15,7 +15,7 @@ export function* signInSaga({ payload }: IActionPayload<ISignInAction>) {
     yield call(callback);
   } catch (error) {
     console.error(error);
-    yield put(signInFailedAction());
+    yield put(signInFailedAction(error.message));
   }
 }
 
