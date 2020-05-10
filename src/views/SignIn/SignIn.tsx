@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { RouteComponentProps } from 'react-router-dom';
 import logo from '../../design/media/logo.svg';
+import { useSignIn } from './useSignIn';
 
 function SignIn(props: RouteComponentProps) {
-  console.log('SignIn', props);
+  const { email, onChangeEmail, password, onChangePassword, onSubmit } = useSignIn(props.history);
+
   return (
     <Container className='container-max-1600 vh-100'>
       <Row className='vh-100'>
@@ -21,15 +23,23 @@ function SignIn(props: RouteComponentProps) {
             <Form.Group controlId='formBasicEmail' className='mb-0'>
               <Form.Control
                 type='email'
+                value={email}
+                onChange={onChangeEmail}
                 placeholder='eve.holt@reqres.in'
                 style={{ borderRadius: '.35rem .35rem 0 0' }}
               />
             </Form.Group>
 
             <Form.Group controlId='formBasicPassword'>
-              <Form.Control type='password' placeholder='cityslicka' style={{ borderRadius: '0 0 .35rem .35rem' }} />
+              <Form.Control
+                type='password'
+                value={password}
+                onChange={onChangePassword}
+                placeholder='cityslicka'
+                style={{ borderRadius: '0 0 .35rem .35rem' }}
+              />
             </Form.Group>
-            <Button variant='primary' type='submit' className='w-75'>
+            <Button variant='primary' className='w-75' onClick={onSubmit}>
               Submit
             </Button>
           </Form>
@@ -39,4 +49,4 @@ function SignIn(props: RouteComponentProps) {
   );
 }
 
-export default SignIn;
+export default memo(SignIn);

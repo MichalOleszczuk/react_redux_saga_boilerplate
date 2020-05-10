@@ -9,7 +9,6 @@ export interface IApiService {
 }
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-axios.defaults.withCredentials = true;
 
 export const ApiService: IApiService = {
   get(url, config) {

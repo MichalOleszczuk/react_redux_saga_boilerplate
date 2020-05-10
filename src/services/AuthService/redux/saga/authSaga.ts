@@ -9,8 +9,10 @@ import { ISignInAction } from '../actions/IAuthActions';
 
 export function* signInSaga({ payload }: IActionPayload<ISignInAction>) {
   try {
-    const { data } = (yield call(AuthService.signIn, payload)) as AxiosResponse<ISignInResponse>;
+    const { email, password, callback } = payload;
+    const { data } = (yield call(AuthService.signIn, { email, password })) as AxiosResponse<ISignInResponse>;
     yield put(signInSuccessAction(data));
+    yield call(callback);
   } catch (error) {
     console.error(error);
     yield put(signInFailedAction());

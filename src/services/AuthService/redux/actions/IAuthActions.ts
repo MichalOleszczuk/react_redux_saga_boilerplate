@@ -8,6 +8,7 @@ export type IAuthActions =
 export interface ISignInAction {
   email: string;
   password: string;
+  callback: () => void;
 }
 
 export interface ISignInSuccessAction {
