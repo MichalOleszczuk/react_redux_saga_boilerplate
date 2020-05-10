@@ -6,17 +6,16 @@ It's based on create-react-app enhanced with:
 - components examples
 - router routes examples
 - routes guardians
-- input validators
 - asynchronous calls with saga examples
 - rootReducer, rootSaga examples
 - ready requests library based on axios
-- bootstrap and font awesome (if you want to activate bootstrap go to main index.jsc and uncomment it)
+- bootstrap and font awesome
 
 Most useful features:
 
 - React Component lifecycle: https://reactjs.org/docs/react-component.html#the-component-lifecycle
 - Redux: http://redux.js.org/
-- React Router: https://reacttraining.com/react-router/web/api/
+- React Router: https://reacttraining.com/react-router/web/guides/quick-start
 - Saga https://redux-saga.js.org/docs/api/
 
 ## Installation
@@ -41,8 +40,8 @@ npm start
 **Log In**
 
 ```$xslt
-Email adress: eve.holt@reqres.in
-Password: cityslicka
+Email adress: *eve.holt@reqres.in*
+Password: *cityslicka*
 ```
 
-Enjoy and let me know what more examples should i implement.
+Enjoy and let me know what more examples should I implement.

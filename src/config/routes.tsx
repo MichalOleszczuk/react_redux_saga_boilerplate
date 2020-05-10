@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from '../views/App';
+import Dashboard from '../views/Dashboard/Dashboard';
 import NotFoundPage from '../views/NotFound/NotFoundPage';
 import SignIn from '../views/SignIn/SignIn';
 import isAuthenticated from './guardians/isAuthenticated';
 import isLoggedIn from './guardians/isLoggedIn';
-import { HOME_PAGE, NOT_FOUND_PAGE, SIGN_IN_PAGE } from './paths';
+import { DASHBOARD_PAGE, NOT_FOUND_PAGE, SIGN_IN_PAGE } from './paths';
 
 /**
  * Routes configuration for route
@@ -15,7 +15,7 @@ import { HOME_PAGE, NOT_FOUND_PAGE, SIGN_IN_PAGE } from './paths';
  */
 const routes = (
   <Switch>
-    <Route exact path={HOME_PAGE} render={(props) => isAuthenticated(<Home {...props} />)} />
+    <Route exact path={DASHBOARD_PAGE} render={(props) => isAuthenticated(<Dashboard {...props} />)} />
     <Route exact path={SIGN_IN_PAGE} render={(props) => isLoggedIn(<SignIn {...props} />)} />
     <Route path={NOT_FOUND_PAGE} render={(props) => <NotFoundPage {...props} />} />
   </Switch>

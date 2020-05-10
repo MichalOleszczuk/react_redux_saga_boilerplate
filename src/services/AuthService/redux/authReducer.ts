@@ -2,7 +2,7 @@ import { AUTH_ACTION_TYPES } from './actions/authActionTypes';
 import { IAuthActions } from './actions/IAuthActions';
 
 export const AUTH_DEFAULT_STATE = {
-  token: false,
+  token: true,
   error: '',
   inProgress: false,
 };
@@ -21,6 +21,12 @@ export const authReducer = (state = AUTH_DEFAULT_STATE, action: IAuthActions) =>
         ...state,
         token: true,
         inProgress: false,
+      };
+    }
+    case AUTH_ACTION_TYPES.SIGN_OUT: {
+      return {
+        ...state,
+        inProgress: true,
       };
     }
     case AUTH_ACTION_TYPES.SIGN_OUT_SUCCESS: {
